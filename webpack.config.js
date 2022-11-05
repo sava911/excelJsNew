@@ -19,6 +19,7 @@ const jsLoaders = () => {
     }
   ]
 
+
   if (isDev) {
     loaders.push('eslint-loader')
   }
@@ -27,6 +28,7 @@ const jsLoaders = () => {
 }
 
 module.exports = {
+  target: 'web',
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
   entry: ['@babel/polyfill', './index.js'],
